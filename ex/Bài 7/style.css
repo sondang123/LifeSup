@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+form{
+    height: 40%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(89, 147, 181);
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 50px 0;
+}
+.input-group{
+    width: 40%;
+}
+input{                               
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+.input-group-btn{
+    text-align: center;
+
+}
+.btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgb(47, 184, 139);
+    border: none;
+
+}
+.btn:hover{
+    opacity: 0.6;
+}
