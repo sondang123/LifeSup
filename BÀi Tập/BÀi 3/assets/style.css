@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+img{
+    width: 120px;
+}
+.background-le{
+    background-color: #1d7874;
+    cursor: pointer;
+}
+.bacground-chan{
+    background-color:#679289  ;
+    cursor: pointer;
+}
+.background-le:hover{
+    background-color: rgb(174, 177, 160);
+    cursor: pointer;
+}
+.bacground-chan:hover{
+    background-color: rgb(169, 169, 86);
+    cursor: pointer;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+Caption{
+    padding: 20pX 0;
+    font-weight: 700;
+}
+th{
+    background-color: #b2dbbf;
+    padding: 20px 0;
+    color:rgb(0, 75, 226);
+}
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    opacity: 0.6;
+}
