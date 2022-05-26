@@ -43,3 +43,13 @@ a{
 a:hover{
     opacity: 0.6;
 }
+a{
+    padding: 15px 15px;
+    text-decoration: none;
+    background-color: rgb(244, 244, 244);
+
+}
+.delete,
+.update{
+    width: 120px;
+}
