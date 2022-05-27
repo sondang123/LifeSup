@@ -5,14 +5,17 @@
 
 }
 img{
-    width: 120px;
+    width: 100px;
+    padding: 10px ;
 }
 .background-le{
-    background-color: #1d7874;
+    background-color: #33a389;
+    /* background-color: #1d7874; */
     cursor: pointer;
 }
 .bacground-chan{
-    background-color:#679289  ;
+    /* background-color:#679289  ; */
+    background-color:#b0c5c1  ;
     cursor: pointer;
 }
 .background-le:hover{
@@ -24,12 +27,14 @@ img{
     cursor: pointer;
 }
 table{
-    width: 100%;
+    width: 60%;
     text-align: center;
+    margin: auto;
 }
 Caption{
     padding: 20pX 0;
     font-weight: 700;
+    font-size: 30px;
 }
 th{
     background-color: #b2dbbf;
@@ -44,12 +49,13 @@ a:hover{
     opacity: 0.6;
 }
 a{
-    padding: 15px 15px;
+    padding: 10px 15px;
     text-decoration: none;
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(221, 234, 143);
+    border-radius: 20px;
 
 }
 .delete,
 .update{
-    width: 120px;
+    width: 110px;
 }
