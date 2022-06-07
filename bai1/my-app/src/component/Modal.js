@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
-const Modal = ({ onAdd }) => {
+const Modal = ({ onAdd ,member,HandleEdit,type}) => {
   const [close, SetClose] = useState(false);
   const handleClose = () => {
     SetClose(true);
@@ -17,11 +17,10 @@ const Modal = ({ onAdd }) => {
   
   const HandlSubmit = () => {
       if(!user.name && !user.address && !user.phone && !user.year){
-        // alert('Hãy Nhập Thông Tin Đầy Đủ')
-        toast.error('Hãy Nhập Đầy Đủ Thông Tin !')
+        alert('Hãy Nhập Thông Tin Đầy Đủ')
+        // toast.error('Hãy Nhập Đầy Đủ Thông Tin !')
       }else{
-
-        onAdd({...user,id:uuidv4()});
+        type==='add'? onAdd({...user,id:uuidv4()}) :  HandleEdit(user)
         setUser({
             name: "",
             address: "",
@@ -33,12 +32,27 @@ const Modal = ({ onAdd }) => {
       }
 
   };
+  const addMember = (member) => {
+    setUser(member)
+   }
 
   return (
     <div>
-      <button className="addBtn" onClick={handleClose}>
-        Thêm Mới
-      </button>
+     { type==='add' ? 
+
+        <button className="addBtn" onClick={handleClose}>
+          Thêm Mới
+        </button>
+      :
+
+        <span className="update" onClick={() => {
+              handleClose()
+              addMember(member)
+              }}>
+              <i className="fa-solid fa-pen-to-square"></i>
+        </span>
+     }
+      
       <div
         className="modal"
         style={
@@ -49,7 +63,10 @@ const Modal = ({ onAdd }) => {
       >
         <div className="formtModal">
           <div className="headerModal">
-            <h1 className="headerModal-title">Thêm Thành Viên</h1>
+          {type==='add' ?
+            <h1 className="headerModal-title">Thêm Thành Viên</h1> :
+            <h1 className="headerModal-title">NHẬP THÔNG TIN UPDATE</h1>
+          }
             <span
               className="headerModal-close"
               onClick={() => {
@@ -88,9 +105,15 @@ const Modal = ({ onAdd }) => {
               type="text"
               placeholder="Nhập Năm Sinh"
             />
+            {type==='add' ?
             <button className="submitModal" onClick={HandlSubmit}>
-              submit
+              SUbmit
             </button>
+            :
+            <button className="submitModal" onClick={HandlSubmit}>
+              SAVE
+            </button>
+            }
           </div>
         </div>
       </div>

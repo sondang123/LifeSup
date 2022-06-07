@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 
 function App() {
-
   const currentUser = useRef(members)
   const [users, setUsers] = useState(members);
 
@@ -64,14 +63,15 @@ function App() {
       <HeaderComponent 
         members={users} 
         onAdd={HandleAdd} 
-        HandleSearch ={HandleSearch} 
+        HandleSearch ={HandleSearch}
+        type={'add'}
 
       />
       <ContentComponent 
         members={users} 
         HandleDelete={HandleDelete} 
         HandleEdit ={HandleEdit}
-
+        type={'edit'}
       />
 
       {/* <ToastContainer

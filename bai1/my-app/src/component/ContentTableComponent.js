@@ -1,4 +1,6 @@
 import ModalEdit from "./ModalEdit.js";
+import ModalConfirm from "./ModalConfirm.js";
+import Modal from "./Modal.js";
 
 function ContentTable({ members, HandleDelete,HandleEdit}) {
   if(members.length === 0){
@@ -19,12 +21,21 @@ function ContentTable({ members, HandleDelete,HandleEdit}) {
         <td>{member.phone}</td>
         <td>{member.year}</td>
         <td>
-          <span className="delete" onClick={() => HandleDelete(member.id)}>
+          {/* <span className="delete" onClick={() => HandleDelete(member.id)}>
             <i className="fa-solid fa-trash-can"></i>
-          </span>
+          </span> */}
+          <ModalConfirm 
+            HandleDelete={HandleDelete}
+            member = {member}
+          />
         </td>
         <td>
-          <ModalEdit
+          {/* <ModalEdit
+            HandleEdit = {HandleEdit}
+            member = {member}
+            
+          /> */}
+          <Modal 
             HandleEdit = {HandleEdit}
             member = {member}
           />
