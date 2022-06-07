@@ -44,3 +44,32 @@ li:hover{
     cursor: pointer;
     background-color: #102c48;
 }
+.menu{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    font-size: 30px;
+    display: none;
+}
+
+
+@media only screen and (max-width: 990px) {
+
+
+    ul{
+        display: block;
+
+    }
+    .header-nav ul li{
+        display: block;
+    }
+    .header-nav{
+       justify-content: space-between;
+    }
+    .menu{
+        display: flex;
+    }
+
+  }
+  
